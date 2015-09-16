@@ -1,0 +1,73 @@
+{% extends "common/base.html" %}
+
+{% block title %} EASYTRANSFER {% endblock %}
+
+{% block main %}
+
+  <div class="first_page" style="background-image:none; height:100%; padding-top:300px;">
+  	<div class="centered">
+  		<h1 style="color:#000"><img src="{{url_for('static',filename='img/logo_text_black.png')}}" style="width:400px; filter: invert(0%); "></h1>
+  		<h3 style="color:#000">P2P Currency Exchange for International Students in Asia</h3>
+  		<div class="calculate_box" style="color:#000">
+  			<div class="exchange_from_row">
+  				<div class="value">
+  					<div class="desc blue">You're are sending exactly</div>
+  					<input value="1000" type="tel" id="sourceAmount" maxlength="12" class="b-transfer-flow-calculator__select-amount b-input m-light-border js-payin-input ng-pristine ng-valid ng-isolate-scope ng-valid-maxlength ng-touched" ng-readonly="model.isTargetFieldWritable()" ng-focus="model.setTargetFieldFocus(false)" ng-change="model.useFixedSource()" ng-model="model.exchange.sourceAmount" tw-number-input-formatter="" show-decimals="model.exchange.sourceCountryCurrency.hasDecimals()" validate="sourceAmount" focus-if="!isMobile()">
+  				</div>
+  				<div class="currency CNY">
+  					<div class="flag">
+  						<img src="{{url_for('static',filename='img/flag_china.png')}}">
+  					</div>
+  					<div class="country_label">
+  						CNY
+  					</div>
+  					<div class="arrow_down">
+  					</div>
+  				</div>
+  			</div>
+  			<div class="exchange_to_row">
+  				<div class="value">
+	  				<div class="desc black">Recipient gets</div>
+	  				<input value="0" type="tel" id="targetAmount" maxlength="12" class="b-transfer-flow-calculator__select-amount b-input m-light-border js-payout-input ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" ng-focus="model.setTargetFieldFocus(true)" ng-change="model.useFixedTarget()" ng-readonly="!model.isFixedTargetPaymentAllowed()" ng-model="model.exchange.targetAmount" tw-number-input-formatter="" show-decimals="model.exchange.targetCountryCurrency.hasDecimals()" validate="targetAmount" readonly="readonly">
+  				
+  				</div>
+  				<div class="currency KRW">
+  					<div class="flag">
+	  					<img src="{{url_for('static',filename='img/flag_south_korea.jpg')}}">
+  					</div>
+  					<div class="country_label">
+  						KRW
+  					</div>
+  					<div class="arrow_down">
+  					</div>
+  				</div>
+  			</div>
+  			<div class="exchange_info_box">
+  			<table>
+  			<tr>
+	  			<td class="feature">Bank's exchange rate </td> <td class="info_value" id="ask_rate">0</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="feature">EasyTransfer's exchange rate </td> <td class="info_value" id="real_rate">0</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="feature">Fee </td> <td  class="info_value" id="fee">0</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="feature">You’re saving </td> <td  class="info_value" id="saving">0</td>
+  			</tr>
+  			</table>
+  			</div>
+
+  			<div class="send_money">
+				<button ng-click="getStarted(details.model)" class="exchange_start_button" translate="">SEND MONEY</button>
+			</div>
+
+  		</div>
+
+  	</div>
+  </div>
+
+</div> 
+
+{% endblock %}

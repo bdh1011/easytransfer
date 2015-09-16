@@ -1,0 +1,443 @@
+
+/* ******************** */
+/* Bootstrap overrides */
+/* ******************** */
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #fff !important;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #fcf8e3 !important;
+}
+.navbar-brand {
+  color: #fff !important;
+}
+
+a.navbar-brand:hover {
+  color: #fcf8e3 !important;
+}
+
+.page-header {
+  margin: 20px 0 20px !important;
+}
+
+
+
+/*
+*    Startuply v1.1 Custom Styles
+*    by Vivaco
+*
+*    Table of Contents
+*    -------------------------
+*    1. Fonts
+*    2. Global & Helpers
+*    3. Preloader
+*    4. Elements
+*    5. Alternative tab slider
+*    6. ShortCodes
+*    7. Navigation Header
+*    8. Top Hero Section
+*    9. Page versions
+*    10. Footer
+*    11. Mobile device 767px
+*    12. Mobile device 540px
+*    13. Mobile device 340px
+*    14. Tablet device Landscape 1024px and 768px
+*    15. Tablet device Portrait 768px and 1024px
+*    16. Desktop medium screen 992px and 1199px
+*    17. Desktop large screen 1200px
+*
+*/
+/* Fonts */
+.thin { font-family: 'Lato', sans-serif; font-weight: 300; }
+
+input,
+body { font-family: 'Lato', sans-serif; font-weight: 400; }
+strong { font-family: 'Lato', sans-serif; font-weight: 700; }
+
+/* Global & Helpers */
+body { color: #000; font-size: 16px; line-height:27px; background: #fff; margin: 0; }
+
+h1 { font-size: 58px; font-weight: 300; display: block; }
+h2 { font-size: 47px; font-weight: 300; display: block; }
+h3 { font-size: 34px; font-weight: 300; display: block; }
+h4 { font-size: 28px; font-weight: 300; display: block; }
+h5 { font-size: 24px; font-weight: 300; display: block; }
+h6 { font-size: 20px; font-weight: 700; display: block; }
+.h7 { font-size: 17px; font-weight: 700; display: block; }
+
+.highlight { color: #1ac6ff; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 { margin-top: 20px; margin-bottom: 20px; }
+h5, .h5, h6, .h6, .h7 { margin-top: 20px; margin-bottom: 10px; }
+
+p { font-size: 16px; line-height: 27px; color: #1D1D1D; }
+small { font-weight: 300; font-size: 15px; line-height: 26px; }
+
+a { color: #1ac6ff; text-decoration: none; }
+a:hover, a:active, a:focus { color: #1ac6ff; text-decoration: none; outline: none; }
+::selection { background-color: #1ac6ff; color: #fff; }
+
+hr { width: 100%; border-top: 1px solid #E9E9E9; display: inline-block; }
+
+.first_page{
+	width:100%;
+	height:800px;
+	background-image:url("../img/china_money.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top:-20px;
+}
+
+.first_page .centered{
+	-webkit-transform: translateY(-45%);
+    -moz-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    -o-transform: translateY(-45%);
+    transform: translateY(-45%);
+        position: relative;
+    top: 40%;
+    margin: 0 auto;
+}
+
+
+.first_page .centered h1{
+	color:#fff;
+	font-size:40px;
+	font-weight:700;
+	text-align:center;
+}
+
+.first_page .centered h3{
+	color:#fff;
+	font-size:25px;
+	font-weight:500;
+	text-align:center;
+}
+
+
+.first_page .centered .calculate_box{
+	width:400px;
+	height:300px;
+	margin: 10px auto;
+	position:relative;
+}
+
+.first_page .centered .calculate_box .exchange_from_row{
+	width:400px;
+	height:100px;
+	background-color:#efe;
+	position:relative;
+	float:left;
+
+}
+
+.first_page .centered .calculate_box .exchange_to_row{
+	width:400px;
+	height:100px;
+	background-color:#efe;
+	position:relative;
+	float:left;
+}
+
+
+.first_page .centered .calculate_box .value{
+	width:250px;
+	height:100px;
+	background-color:#fff;
+	float:left;
+	border:1px solid #aaa;
+}
+
+
+.first_page .centered .calculate_box .currency{
+	width:150px;
+	height:100px;
+	background-color:#192439;
+	float:left;
+	border:1px solid #aaa;
+	padding:25px 10px;
+	position:relative;
+}
+
+.first_page .centered .calculate_box .currency:hover {
+    border-color: #9daab3;
+    background-color:#111824
+}
+
+.first_page .centered .calculate_box .currency .select_currency{
+	width:150px;
+	height:100px;
+	background-color:#fff;
+	color:#000;
+	border:1px solid #aaa;
+	padding:25px 10px;
+	position:absolute;
+	left:150px;
+	top:0;
+}
+
+.first_page .centered .calculate_box .currency .select_currency .country_label{
+	color:#000;
+}
+.first_page .centered .calculate_box .currency .select_currency:hover {
+    border-color: #9daab3;
+    background-color:#111824
+}
+
+.first_page .centered .calculate_box .currency .select_currency:hover .country_label{
+	color:#fff;
+}
+
+.blue{
+	color:#00B9FF;
+}
+
+.black{
+	color:#000;
+}
+
+.first_page .centered .calculate_box .value .desc{
+	font-size:17px;
+	height:30px;
+	vertical-align:middle;
+	padding-top:10px;
+	margin-left:30px;
+}
+
+
+.first_page .centered .calculate_box .value #sourceAmount{
+	    font-weight: 500;color: #111;
+    font-family: 'Avenir W02', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    padding: 0 0 9px 30px;
+    height: 60%;
+    box-shadow: none;
+    text-align: left;
+    width: 80%;
+    border: none;
+    background: #fff;
+}
+
+.first_page .centered .calculate_box .value #targetAmount{
+	    font-weight: 500;color: #111;
+    font-family: 'Avenir W02', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    padding: 0 0 9px 30px;
+    height: 60%;
+    box-shadow: none;
+    text-align: left;
+    width: 80%;
+    border: none;
+    background: #fff;
+
+}
+
+input:focus{
+	outline: -webkit-focus-ring-color auto 0px!important;
+}
+
+.flag{
+	width:30px;
+	height:20px;
+	margin:15px 5px;
+	float:left;
+}
+
+.flag img{
+	width:100%;
+}
+
+.country_label{
+	width:40px;
+	height:30px;
+	margin:16px 3px;
+	color:#fff;
+	vertical-align:middle;
+	font-size:24px;
+	font-weight:500;
+	float:left;
+
+}
+
+.arrow_down{
+	background-image:url('../img/arrow_right.png');
+	width: 25px;
+	height:25px;
+	margin:15px 3px;
+	float:right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.exchange_start_button_container{
+   	width:400px;
+   	height:155px;
+   	position:relative;
+   	float:left;
+}
+
+.exchange_info_box{
+	width:100%;
+	height:100px;
+	float:left;
+	margin-top:10px;
+}
+
+.exchange_info_box table{
+	margin:0 auto;
+	background-color:rgba(100,100,100,0.5);
+}
+
+.exchange_info_box .feature{
+	color:#eee;
+	font-size:1em;
+	font-weight:400;
+	padding-right:10px;
+	padding-left:15px;
+}
+
+.exchange_info_box .info_value{
+	color:#fff;
+	font-size:1.2em;
+	font-weight:500;
+	padding-right:15px;
+	padding-left:10px;
+}
+
+.exchange_start_button {
+    border-radius: 3px;
+    min-width: 192px;
+    border-bottom: 0px;
+    box-shadow: none;
+    font-weight: 800;
+    font-size: 16px !important;
+    padding: 17px 36px 15px;
+    background-color: #58D941;
+    box-shadow: 0 1px 1px rgba(128, 128, 128, 0.2);
+    color: #fff !important;
+    font-size: 14px !important;
+    font-family: 'Avenir W02', 'Helvetica Neue', helvetica, arial, sans-serif !important;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+    border: 0;
+    border-bottom: 1px solid #32aa22;
+    min-width: 192px;
+    padding: 18px 36px 16px;
+    background-color: #46d633;
+    cursor: pointer;
+    margin:15px 104px;
+}
+
+.second_page{
+	width:100%;
+	background-color:#fff;
+	position:relative;
+}
+
+.why_easy_transfer{
+	width:100%;
+	height:150px;
+	font-weight: 800;
+    font-size: 30px;
+    text-align:center;
+    color:#000;
+    padding:60px 0;
+}
+.why_row_white{
+	width:100%;
+	height:400px;
+	background-color:#FFF;
+}
+.why_row_grey{
+	width:100%;
+	height:400px;
+	background-color:#FAFAFA;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.second_page .line_wrapper{
+	width: 960px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.second_page .why_row_grey .line_wrapper img{
+	float: left;
+    margin-left: 155px;
+    margin-top:50px;
+	vertical-align: middle;
+	width:200px;
+	height:200px;
+
+
+}
+.second_page .why_row_grey .line_wrapper div{
+
+    width: 42%;
+    float: right;
+    margin: 20px 70px 0 0;
+}
+
+.second_page .why_row_white .line_wrapper img{
+	float: right;
+    margin-right: 155px;
+    margin-top:50px;
+	vertical-align: middle;
+	width:200px;
+	height:200px;
+
+
+}
+.second_page .why_row_white .line_wrapper div{
+    width: 42%;
+    float: left;
+    margin: 20px 20px 0 155px;
+}
+.second_page .line_wrapper div h3 {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+
+.second_page .line_wrapper div p {
+    margin: 5px 0 20px 0;
+    font-family: 'Open sans', sans-serif;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+.img-circle{
+	margin-left:110px;
+	width:200px;
+	height:200px;
+}
+
+footer{
+	    background-color: #efefef;
+    padding: 2%;
+    margin-top:-30px;
+}
+
+
+footer p {
+    text-align: center;
+    color: #666;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    line-height: 20px;
+    vertical-align:middle;
+    padding-top:8px;
+}
