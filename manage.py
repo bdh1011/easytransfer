@@ -1,5 +1,5 @@
 # manage.py
-from flask.ext.script import Shell, Manager
+from flask.ext.script import Shell, Manager, Server
 from flask import current_app
 
 from app.database import db
@@ -11,8 +11,12 @@ manager = Manager(create_app)
 def _make_context():
     return dict(app=current_app, db=db, models=models)
 
+
+server = Server(host="0.0.0.0", port=80)
+
 manager.add_option('-c', '--config', dest='config', required=False)
 manager.add_command("shell", Shell(use_ipython=True, make_context=_make_context))
+manager.add_command("runserver", server)
 
 @manager.command
 def createdb():
@@ -38,3 +42,4 @@ def testall():
 
 if __name__ == "__main__":
     manager.run()
+
