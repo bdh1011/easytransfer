@@ -18,9 +18,10 @@ def create_app(config=None):
 
     # If no config file is passed in on the command line:
     if config is None:
-        config = os.path.join(app.root_path, os.environ.get('FLASK_APPLICATION_SETTINGS'))
+	pass
+        # config = os.path.join(app.root_path, os.environ.get('FLASK_APPLICATION_SETTINGS'))
 
-    app.config.from_pyfile(config)
+    #app.config.from_pyfile(config)
 
     # Secret key needed to use sessions.
     app.secret_key = app.config['SECRET_KEY']
