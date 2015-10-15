@@ -8,7 +8,6 @@ P2P Currency Exchange for International Students in Asia
 Save Money
 ----
 You will save at least 90% compared to transfers using banks. What in the world happened? The only thing you have to do is to visit Korean bank to request transfer your money to easyTransfer system as usually. We will find someone out there in China who also wanted to send money to Korea. EasyTransfer would match that Chinese guy with you. Our system helps you to send your money directly to the Chinese guy without crossing the border, and the Chinese guy money to your bank account
-Version
 ----
 
 Safe Transfer
